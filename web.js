@@ -15,10 +15,10 @@
 
     buffer = fs.readFileSync("index.html");
     response.header("Content-Type", "text/html");
-    return response.send(buffer);
+    return response.send(buffer.toString());
   });
 
-  port = process.env.PORT || 5000;
+  port = process.env.PORT || 8080;
 
   app.listen(port, function() {
     return console.log("Listening on " + port);
