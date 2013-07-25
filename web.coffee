@@ -3,6 +3,7 @@ app = express()
 fs = require 'fs'
 
 app.use express.logger()
+app.use express.static(__dirname+'/static')
 
 app.get '/', (request, response) ->
   buffer = fs.readFileSync "index.html"

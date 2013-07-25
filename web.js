@@ -10,6 +10,8 @@
 
   app.use(express.logger());
 
+  app.use(express["static"](__dirname + '/static'));
+
   app.get('/', function(request, response) {
     var buffer;
 
